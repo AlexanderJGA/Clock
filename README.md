@@ -1,2 +1,2 @@
 # Clock
-clock with hour UTC
+clock
