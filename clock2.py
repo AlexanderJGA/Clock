@@ -27,18 +27,18 @@ class Digital_clock():
         self.mywindow.mainloop()
 
     def update_clock(self):
-        tiempo = datetime.utcnow()
+        tiempo = datetime.now()
         now = tiempo.strftime("%H:%M:%S")
         self.current_time_label.configure(text=now)
         self.mywindow.after(1000, self.update_clock)
 
     def get_date(self):
         # Get Week Day
-        datetime_object = datetime.utcnow()
+        datetime_object = datetime.now()
         week_day = datetime_object.strftime("%A")
 
         # Get Current date
-        today = datetime.utcnow()
+        today = datetime.now()
         d1 = today.strftime("%d/%m/%Y")
         self.week_day_label.configure(text = d1 + ' | ' + week_day)
 
